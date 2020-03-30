@@ -1,0 +1,20 @@
+<h1>Webex Meetings</h1>
+
+<h2>Webex SDK</h2>
+<input type="text" [(ngModel)]="token" id="token" />
+<button (click)="onSubmit()">Save Token</button>
+<p>Webex Instance Created: {{!!webex}}</p>
+
+<button (click)="onGetMe()">Get Me</button>
+
+<h2>Meeting</h2>
+<p>
+  Registered: {{ registered }}<br/>
+  Sync Status: {{ syncStatus }}
+</p>
+<button (click)="onRegister()">Register</button>
+<button (click)="onUnregister()">Unregister</button>
+<button (click)="onSyncMeetings()">Sync Meetings</button>
+<button (click)="onCreateMeeting(destination)">Create Meeting</button>
+
+<pre>{{printMeeting()}}</pre>
